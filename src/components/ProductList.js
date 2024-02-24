@@ -4,7 +4,6 @@ import { Button, Table } from "reactstrap";
 import { fetchProducts } from "../features/productSlice";
 import { fetchCategories } from "../features/categorySlice";
 import { addToCart } from "../features/cartSlice";
-import alertify from "alertifyjs";
 
 const ProductList = () => {
   const dispatch = useDispatch();
@@ -26,12 +25,8 @@ const ProductList = () => {
           unitPrice: product.unitPrice,
         })
       );
-      alertify.set("notifier", "position", "bottom-right");
-      alertify.set("notifier", "delay", 3);
-      alertify.success(
-        `${product.productName} added to cart.`,
-        console.log("working")
-      );
+
+    
     } catch (error) {
       throw new Error(error);
     }

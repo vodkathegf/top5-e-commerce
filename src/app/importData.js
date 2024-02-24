@@ -1,7 +1,16 @@
 const { Client } = require("pg");
 const data = require("../api/db.json");
 
-const client = new Client(process.env.DATABASE_URL);
+const DATABASE_URL =
+  "postgresql://reduxJsGodAdmin:CpzINVZWwIcxQuE4bBLsUQ@vodkathegf-13822.8nj.gcp-europe-west1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full";
+
+// Create a new client instance with the provided connection URL
+const client = new Client({
+  connectionString: DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false, // Required for CockroachDB
+  },
+});
 
 (async () => {
   try {

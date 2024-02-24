@@ -1,5 +1,5 @@
 const { Client } = require("pg");
-const data = require("./db.json");
+const data = require("../api/db.json");
 
 const client = new Client(process.env.DATABASE_URL);
 

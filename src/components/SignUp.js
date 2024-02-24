@@ -4,7 +4,7 @@ const SignUp = () => {
   return (
     <div>
       {" "}
-      <h1>ula habu kaydol daaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+      <h1>giriş yap biliosun abla </h1>
     </div>
   );
 };
